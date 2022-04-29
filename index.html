@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Информация обо мне в интернете</title>
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <!-- OGP -->
+  <meta property="og:title" content="Информация обо мне в интернете">
+  <meta property="og:description" content="Что сайты знают обо мне?">
+  <meta property="og:image" content="https://aboutme.hoolie.org/poster.jpg">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="main.css">
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/UAParser.js/1.0.2/ua-parser.min.js" integrity="sha512-M/6+/Ib+r5t/hijvSPLPO76abBzT8vlMVRSJ16JDA+NV9CGCkAjq8UD4kHN6KpHncDTRRIb0oUU01yhW+yfqng==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="main.js"></script>
+</head>
+<body>
+  <div id="wrapper">
+
+    <!-- Common info -->
+    <div class="common" id="commonInfo">
+
+      <div>
+        <span data-field="ip">100.100.100.100</span>
+        <span>Ваш IP</span>
+      </div>
+    </div>
+
+    <!-- Info blocks -->
+    <div class="info-blocks">
+
+      <div class="__left">
+
+        <div class="separator">Информация по IP</div>
+
+        <div class="info-block">
+          <span>Ваш город</span>
+          <span>
+            <span data-field="city"></span>,
+            <span data-field="country"></span>
+          </span>
+        </div>
+
+        <div class="info-block">
+          <span>Ваш провайдер</span>
+          <span data-field="provider"></span>
+        </div>
+
+        <div class="info-block">
+          <span>Часовой пояс</span>
+          <span data-field="timezone">Windows 13</span>
+        </div>
+
+        <div class="info-block">
+          <span>Текущее время</span>
+          <span data-field="timestamp"></span>
+        </div>
+
+        <div class="separator">Информация о браузере</div>
+
+        <div class="info-block">
+          <span>Ваша ОС</span>
+          <span data-field="os"></span>
+        </div>
+
+        <div class="info-block">
+          <span>Ваш браузер</span>
+          <span data-field="browser"></span>
+        </div>
+      </div>
+
+      <div class="__right">
+
+        <div class="separator">Информация по системе</div>
+
+        <div class="info-block">
+          <span>Разрешение экрана</span>
+          <span data-field="screen-resolution"></span>
+        </div>
+
+        <div class="info-block">
+          <span>Оперативная память</span>
+          <span>
+            <span data-field="ram"></span>
+          </span>
+        </div>
+
+        <div class="info-block">
+          <span>Процессор</span>
+          <span>
+            <span data-field="hardware-concurrency"></span>
+            <span>потока</span>
+          </span>
+        </div>
+
+        <div class="info-block">
+          <span>Графическое ядро</span>
+          <span data-field="gpu-info"></span>
+        </div>
+
+        <div class="info-block">
+          <span>Сенсорный экран</span>
+          <span data-field="is-touch-screen"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
