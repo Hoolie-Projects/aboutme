@@ -38,26 +38,6 @@ window.onload = () => {
   getEl('os').innerHTML = `${browserInfo.getOS().name} ${browserInfo.getOS().version || ''}`
   getEl('browser').innerHTML = `${browserInfo.getBrowser().name} ${browserInfo.getBrowser().version}`
 
-  // Get network speed
-  let dl = navigator.connection.downlink
-  const commonInfoEl = document.getElementById('commonInfo')
-
-  if(dl) {
-
-    const div = document.createElement('div')
-
-    const span1 = document.createElement('span')
-    span1.innerHTML = `${dl} Мбит/сек`
-
-    const span2 = document.createElement('span')
-    span2.innerHTML = 'Скорость интернета'
-
-    div.appendChild(span1)
-    div.appendChild(span2)
-
-    commonInfoEl.appendChild(div)
-  }
-
 
 }
 
